@@ -1,0 +1,29 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.rewardgame.com.himanshu.rewardgame.MainActivity">
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/home"
+        android:title="Home"
+         />
+
+
+    <item
+        android:id="@+id/spinFragment"
+        android:icon="@drawable/spinning_wheel"
+        android:title="Spin"
+       />
+
+    <item
+        android:id="@+id/referFragment"
+        android:icon="@drawable/share"
+        android:title="Refer"
+       />
+
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/settings"
+        android:title="@string/action_settings"
+       />
+</menu>

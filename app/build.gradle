@@ -1,0 +1,130 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.google.gms.google-services'
+    id 'applovin-quality-service'
+    id 'com.google.firebase.crashlytics'
+}
+
+applovin {
+    apiKey "dQciaiyLTwFeJT9QcO5HUpTm-qdMqkhE9NlmC0D8MryvPNsfGQ_kJN7OA8pfGZtlT3-w9WJNAT4eErzEyp6mJq"
+}
+android {
+    namespace 'com.sgamerapps.android'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.sgamerapps.android"
+        minSdk 21
+        targetSdk 33
+        versionCode 9
+        versionName "1.0.9"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
+    implementation 'androidx.annotation:annotation:1.5.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
+    implementation 'com.google.firebase:firebase-analytics-ktx:21.2.1'
+    implementation 'com.google.firebase:firebase-crashlytics-ktx:18.3.6'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+
+//
+    implementation 'com.github.AnupKumarPanwar:ScratchView:1.9.1'
+
+//Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    // JSON Converter
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+
+//    Firebase
+    implementation platform('com.google.firebase:firebase-bom:31.3.0')
+
+    // Add the dependency for the Firebase Authentication library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-auth-ktx'
+    // Add the dependency for the Realtime Database library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-database-ktx'
+
+    // Also add the dependency for the Google Play services library and specify its version
+    implementation 'com.google.android.gms:play-services-auth:20.5.0'
+
+
+//    Jwt
+    implementation 'io.jsonwebtoken:jjwt:0.7.0'
+
+
+//    Ads
+    implementation 'com.applovin:applovin-sdk:11.9.0'
+    implementation 'com.applovin.mediation:facebook-adapter:6.12.0.0'
+    implementation 'com.onesignal:OneSignal:4.8.5'
+    implementation 'com.airbnb.android:lottie:5.2.0'
+
+    implementation 'com.unity3d.ads:unity-ads:4.7.1'
+
+    implementation 'com.facebook.android:audience-network-sdk:6.+'
+
+//  To show gifs
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.25'
+
+    implementation ('com.facebook.stetho:stetho:1.3.1') {
+        exclude module: 'support-v4'
+    }
+    //Facebook
+    implementation "com.anythink.sdk:adapter-facebook:6.1.74"
+    implementation "com.facebook.android:audience-network-sdk:6.12.0"
+    implementation "androidx.annotation:annotation:1.0.0"
+    //TopOn's core Package
+    implementation "com.anythink.sdk:core:+"
+    //TopOn's Native Ad Integration Package
+    implementation "com.anythink.sdk:nativead:+"
+    //TopOn's Banner Ad Integration Package
+    implementation "com.anythink.sdk:banner:+"
+    //TopOn's Interstitial Ad Integration Package
+    implementation "com.anythink.sdk:interstitial:+"
+
+
+    implementation "androidx.browser:browser:1.5.0"
+
+}
+

@@ -1,0 +1,28 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://artifacts.applovin.com/android' }
+        maven {
+            url 'https://anythink.jfrog.io/artifactory/android_sdk'
+        }
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://artifacts.applovin.com/android' }
+        maven {
+            url 'https://anythink.jfrog.io/artifactory/android_sdk'
+        }
+    }
+}
+rootProject.name = "Reward Game"
+include ':app'
+include ':luck_wheel'
+include ':luckyWheel'

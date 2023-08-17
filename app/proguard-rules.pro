@@ -1,0 +1,1 @@
+-keep class com.sgamerapps.android.data.RedeemPlan { *; }
